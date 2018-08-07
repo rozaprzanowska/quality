@@ -16,7 +16,7 @@ r2Fastq = sys.argv[2]
 # define plot function
 def myPlotFunc(fastq):
 	for i,rec in enumerate(SeqIO.parse(fastq,"fastq")):
-		if i >= 50:
+		if i >= 60:
 			break
 		plt.plot(rec.letter_annotations["phred_quality"])
 	plt.ylim(0,45)
